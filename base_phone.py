@@ -58,7 +58,9 @@ class PhoneCommon(models.AbstractModel):
                 if vals.get(self._country_field):
                     country = self.pool['res.country'].browse(
                         cr, uid, vals[self._country_field], context=context)
-                    countrycode = country.code
+#THIS A QUICK FIX FOR CANADA ONLY
+#                    countrycode = country.code
+                    countrycode = "39"
                 elif ids:
                     rec = self.browse(cr, uid, ids[0], context=context)
                     country = safe_eval(
