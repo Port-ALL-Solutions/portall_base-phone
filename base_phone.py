@@ -60,7 +60,7 @@ class PhoneCommon(models.AbstractModel):
                         cr, uid, vals[self._country_field], context=context)
 #THIS A QUICK FIX FOR CANADA ONLY
 #                    countrycode = country.code
-                    countrycode = "39"
+                    countrycode = "CA"
                 elif ids:
                     rec = self.browse(cr, uid, ids[0], context=context)
                     country = safe_eval(
